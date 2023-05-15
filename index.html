@@ -7,20 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <title>Spotify-</title>
+    <title>Spotify</title>
 
     <style>
         body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
         }
 
         .sidebar {
             height: 100%;
             width: 0;
-            
+            position: fixed;
             top: 0;
             right: 0;
             background-color: #111;
@@ -29,142 +28,152 @@
             padding-top: 60px;
         }
 
-        .sidebar a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
 
-        .sidebar a:hover {
-            color: #f1f1f1;
-        }
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
 
-        .sidebar .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
 
-        .openbtn {
-            font-size: 20px;
-            cursor: pointer;
-            background-color: #111;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-        }
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
 
-        .openbtn:hover {
-            background-color: #444;
-        }
+      .openbtn:hover {
+        background-color: #444;
+      }
 
-        .transition-left {
+        #main {
             transition: margin-left .5s;
             padding: 16px;
         }
-
-        .main-transition {}
-        
     </style>
-</head>
+  </head>
 
+  <!---------------------------------------------------------------------------------------- BODY -->
 
-<!---------------------------------------------------------------------------------------- BODY -->
-
-<body>
+  <body>
     <main>
-        <div class="conrainer-fluid d-flex">
-            <!---------------------------------------------------------------------------------------- NAVBAR -->
-            <nav class="col p-0">
-                <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark vh-100" style="width: 350px;">
-                    <a href="/"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <svg class="bi pe-none me-2" width="40" height="32">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
-                        <span class="fs-4">Sidebar</span>
-                    </a>
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active" aria-current="page">
-                                <svg class="bi pe-none me-2" width="16" height="16">
-                                    <use xlink:href="#home"></use>
-                                </svg>
-                                Home porco
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi pe-none me-2" width="16" height="16">
-                                    <use xlink:href="#speedometer2"></use>
-                                </svg>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi pe-none me-2" width="16" height="16">
-                                    <use xlink:href="#table"></use>
-                                </svg>
-                                Orders
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi pe-none me-2" width="16" height="16">
-                                    <use xlink:href="#grid"></use>
-                                </svg>
-                                Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi pe-none me-2" width="16" height="16">
-                                    <use xlink:href="#people-circle"></use>
-                                </svg>
-                                Customers
-                            </a>
-                        </li>
-                    </ul>
-                    <hr>
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="" class="rounded-circle me-2" width="32"
-                                height="32">
-                            <strong>mdo</strong>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+      <div class="conrainer-fluid d-flex">
+        <!---------------------------------------------------------------------------------------- NAVBAR -->
+        <nav class="col p-0">
+          <div
+            class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark vh-100"
+            style="width: 350px"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+            >
+              <svg class="bi pe-none me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+              <span class="fs-4">Sidebar</span>
+            </a>
+            <hr />
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">
+                  <svg class="bi pe-none me-2" width="16" height="16">
+                    <use xlink:href="#home"></use>
+                  </svg>
+                  Home porco
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2"></use>
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16">
+                    <use xlink:href="#table"></use>
+                  </svg>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16">
+                    <use xlink:href="#grid"></use>
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi pe-none me-2" width="16" height="16">
+                    <use xlink:href="#people-circle"></use>
+                  </svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+            <hr />
+            <div class="dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt=""
+                  class="rounded-circle me-2"
+                  width="32"
+                  height="32"
+                />
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
             <!---------------------------------------------------------------------------------------- MAIN - OFF-CANVAS -->
             <div class="container-fluid d-flex">
                 <div class="row">
                     <!---------------------------------------------------------------------------------------- MAIN -->
-                    <div id="main" class="col-12 p-0 h-100">
-                        <img src="https://www.donnamoderna.com/content/uploads/2020/07/Immagini-rilassanti-di-panorami-naturali.jpg" style="width: 100%;"alt="">
+                    <div id="main" class="col p-0 h-100">
                         <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+                        <img src="https://www.donnamoderna.com/content/uploads/2020/07/Immagini-rilassanti-di-panorami-naturali.jpg" style="width: 100%;"alt="">
                     </div>
 
                     <!---------------------------------------------------------------------------------------- OFF-CANVAS -->
-                    <div id="off-canvas">
-                        <div id="mySidebar" class="sidebar transition-left">
+                    <div id="off-canvas" class="col">
+                        <div id="mySidebar" class="sidebar">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                             <a href="#">About</a>
                             <a href="#">Services</a>
@@ -180,39 +189,23 @@
         </div>
     </main>
 
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
 
         <script>
             function openNav() {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginRight = "250px";
-                document.getElementById("main").style.width = "calc(100% - 250px)";
             }
         
             function closeNav() {
                 document.getElementById("mySidebar").style.width = "0";
                 document.getElementById("main").style.marginRight = "0";
-                document.getElementById("main").style.width = "100%";
             }
         </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
