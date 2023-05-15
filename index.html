@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            
         }
 
         .sidebar {
@@ -66,6 +67,7 @@
             transition: margin-left .5s;
             padding: 16px;
         }
+        
     </style>
 </head>
 
@@ -153,7 +155,7 @@
             <div class="container-fluid d-flex">
                 <div class="row">
                     <!---------------------------------------------------------------------------------------- MAIN -->
-                    <div id="main" class="col p-0 h-100">
+                    <div id="main" class="col-12 p-0 h-100">
                         <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
                         <img src="https://www.donnamoderna.com/content/uploads/2020/07/Immagini-rilassanti-di-panorami-naturali.jpg" style="width: 100%;"alt="">
                     </div>
@@ -189,11 +191,13 @@
             function openNav() {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginRight = "250px";
+                document.getElementById("main").style.width = "calc(100% - 250px)";
             }
         
             function closeNav() {
                 document.getElementById("mySidebar").style.width = "0";
                 document.getElementById("main").style.marginRight = "0";
+                document.getElementById("main").style.width = "100%";
             }
         </script>
 </body>
