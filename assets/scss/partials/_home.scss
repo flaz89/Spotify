@@ -157,9 +157,16 @@
 
     }
     #volumeControl::-webkit-slider-thumb {
-        opacity: 0; /* Nasconde lo slider */
+        -webkit-appearance: none;
       }
 
+      #volumeControl::-moz-range-thumb {
+        -webkit-appearance: none;
+      }
+      
+      #volumeControl::-ms-thumb {
+        -webkit-appearance: none;
+      }
     #test {
         background-color: #181818;
         border: none;

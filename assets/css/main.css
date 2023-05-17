@@ -200,7 +200,13 @@
   -webkit-appearance: none;
 }
 #player #volumeControl::-webkit-slider-thumb {
-  opacity: 0; /* Nasconde lo slider */
+  -webkit-appearance: none;
+}
+#player #volumeControl::-moz-range-thumb {
+  -webkit-appearance: none;
+}
+#player #volumeControl::-ms-thumb {
+  -webkit-appearance: none;
 }
 #player #test {
   background-color: #181818;
