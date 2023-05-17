@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-LightItalic.otf);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Book.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-BookItalic.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-MediumItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-MediumItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-BoldItalic.otf);
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url(../fonts/CircularStd-BlackItalic.otf);
+  font-weight: 900;
+  font-style: italic;
+}
+#navbar {
+  min-width: 350px;
+  max-width: 350px;
+  height: calc(100vh - 80px);
+  background-color: black;
+}
+#navbar #list_comment {
+  padding: 0;
+  list-style-type: none;
+  opacity: 50%;
+  font-size: 0.8em;
+  overflow-y: scroll;
+}
+#navbar .bg_gradient1 {
+  background: linear-gradient(100deg, #4832A5, #9198e5);
+  margin-left: 2px;
+}
+#navbar .bg_gradient2 {
+  background-color: #02543A;
+  color: #149643;
+  margin-left: 2px;
+}
+#navbar .test1 {
+  background-color: black;
+}
+
+#main {
+  overflow: hidden;
+}
+
+#main-body {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to bottom right, #222222, #101010);
+}
+
+#upper-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all 1.5s ease-out;
+}
+
+.active {
+  background: rgba(26, 0, 142, 0.574);
+}
+
+.inactive {
+  background-color: transparent;
+}
+
+.btn-account {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.dropdown-menu {
+  background-color: #282828;
+}
+
+.dropdown-menu button {
+  color: white;
+  margin: 10px 0;
+}
+
+.dropdown-menu button:hover {
+  background-color: #5e5e5e;
+  color: white;
+}
+
+.dropdown-menu li:last-child {
+  border-top: 1px solid #343434;
+}
+
+#playing-container-under {
+  background-image: linear-gradient(to top right, black, rgba(24, 24, 24, 0));
+}
+
+.col-custom-sidebar {
+  min-width: 280px;
+  max-width: 280px;
+  background: black;
+  transition: all 0.3s;
+  box-shadow: -4px 4px 30px rgba(0, 0, 0, 0.4);
+}
+.col-custom-sidebar i {
+  color: #a5a5a5;
+}
+.col-custom-sidebar i:hover {
+  color: #dbdbdb;
+}
+
+#sidebar.active {
+  margin-right: -280px;
+}
+
+.bg-color-sidebar-list {
+  background-color: black;
+  color: #a5a5a5;
+}
+.bg-color-sidebar-list h6 {
+  font-size: 0.8em;
+}
+.bg-color-sidebar-list p {
+  font-size: 0.7em;
+}
+.bg-color-sidebar-list:hover {
+  background-color: black;
+  color: #dbdbdb;
+}
+.bg-color-sidebar-list:focus {
+  background-color: black;
+}
+
+#player {
+  background-color: #181818;
+  border-top: 0.5px solid #343434;
+  position: absolute;
+  bottom: 0;
+}
+#player #cover {
+  width: 60px;
+  margin-left: 20px;
+}
+#player #volumeControl {
+  width: 80px;
+  height: 4px;
+  background: #E9ECEF;
+  -webkit-appearance: none;
+}
+#player #volumeControl::-webkit-slider-thumb {
+  opacity: 0; /* Nasconde lo slider */
+}
+#player #test {
+  background-color: #181818;
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}/*# sourceMappingURL=main.css.map */
