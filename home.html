@@ -26,9 +26,9 @@
             <!---------------------------------------------------------------------------------------- NAVBAR -->
             <div id="navbar" class="col-3 p-0">
                 <nav class="col pb-0 test1 h-100">
-                    <div class="d-flex flex-column flex-shrink-0 p-3 text-white h-100" style="width: 350px;">
+                    <div class="d-flex flex-column flex-shrink-0 text-white h-100 pt-3" style="width: 350px;">
         
-                        <div class="dropdown ">
+                        <div class="dropdown ps-3"><!-- dropdown -->
                             <a href="#" class="d-flex align-items-center text-decoration-none"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <strong class="p-1 ms-1">•••</strong>
@@ -44,61 +44,62 @@
                             </ul>
                         </div>
         
-                        
-                        <ul class="nav  flex-column">
-                            <li class="nav-item">
-                                <a href="./home.html" class="nav-link ps-0" aria-current="page">
-                                    <svg class="bi pe-none" width="2" height="16">
-                                        <use xlink:href="#home"></use>
-                                    </svg>
-                                    <i class="bi bi-house-door-fill p-1 h5" ></i> &nbsp Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link  ps-0 ">
-                                    <svg class="bi pe-none" width="2" height="16">
-                                        <use xlink:href="#speedometer2"></use>
-                                    </svg>
-                                    <i class="bi bi-search p-1 h5"></i> &nbsp Cerca
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link  ps-0">
-                                    <svg class="bi pe-none" width="2" height="16">
-                                        <use xlink:href="#table"></use>
-                                    </svg>
-                                    <i class="bi bi-collection p-1 h5"></i> &nbsp La tua libreria
-                                </a>
-                            </li>
-                            <br>
-                            <li>
-                                <a href="#" class="nav-link  ps-0">
-                                    <svg class="bi pe-none" width="2" height="16">
-                                        <use xlink:href="#table"></use>
-                                    </svg>
-                                    <i class="bi bi-plus-square-fill p-1 h5"></i> &nbsp Crea playlist
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link ps-0">
-                                    <svg class="bi pe-none" width="2" height="16">
-                                        <use xlink:href="#table"></use>
-                                    </svg>
-                                    <i class="bi bi-heart-fill bg_gradient1 p-1"></i> &nbsp Brani che ti piacciono
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link ps-0">
-                                    <svg class="bi pe-none" width="2" height="16">
-                                        <use xlink:href="#table"></use>
-                                    </svg>
-                                    <i class="bi bi-bookmark-fill p-1 bg_gradient2"></i> &nbsp I tuoi episodi
-                                </a>
-                            </li>
-                            <hr>
-                        </ul>
-                        <div style="border:1px solid red; display: flex; flex-direction: column; height: 100%;"  >
-                            <ul id="list_comment"  >
+                        <div class="px-3"> <!-- menu -->
+                            <ul class="nav  flex-column pb-3 border-bottom border-dark">
+                                <li class="nav-item">
+                                    <a href="./home.html" class="nav-link ps-0" aria-current="page">
+                                        <svg class="bi pe-none" width="2" height="16">
+                                            <use xlink:href="#home"></use>
+                                        </svg>
+                                        <i class="bi bi-house-door-fill p-1 h5" ></i> &nbsp Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link  ps-0 ">
+                                        <svg class="bi pe-none" width="2" height="16">
+                                            <use xlink:href="#speedometer2"></use>
+                                        </svg>
+                                        <i class="bi bi-search p-1 h5"></i> &nbsp Cerca
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link  ps-0">
+                                        <svg class="bi pe-none" width="2" height="16">
+                                            <use xlink:href="#table"></use>
+                                        </svg>
+                                        <i class="bi bi-collection p-1 h5"></i> &nbsp La tua libreria
+                                    </a>
+                                </li>
+                                <br>
+                                <li>
+                                    <a href="#" class="nav-link  ps-0">
+                                        <svg class="bi pe-none" width="2" height="16">
+                                            <use xlink:href="#table"></use>
+                                        </svg>
+                                        <i class="bi bi-plus-square-fill p-1 h5"></i> &nbsp Crea playlist
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link ps-0">
+                                        <svg class="bi pe-none" width="2" height="16">
+                                            <use xlink:href="#table"></use>
+                                        </svg>
+                                        <i class="bi bi-heart-fill bg_gradient1 p-1"></i> &nbsp Brani che ti piacciono
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link ps-0">
+                                        <svg class="bi pe-none" width="2" height="16">
+                                            <use xlink:href="#table"></use>
+                                        </svg>
+                                        <i class="bi bi-bookmark-fill p-1 bg_gradient2"></i> &nbsp I tuoi episodi
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="list_comment" class="h-100 ps-3"><!-- scrollbar -->
+                            <ul  class="h-100 m-0 px-2 pt-3"   >
                                 <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
                                 <li class="mb-2" >Be The Young</li>
                                 <li class="mb-2" >".." cit. Kimiko (lug-ago 2022)</li>
@@ -127,6 +128,18 @@
                                 </div>
                                 <li class="mb-2">Frah Quintale Mix</li>
                                 <li class="mb-2">Francesco Guccini Mix</li>
+                                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                                <li class="mb-2">(Revenge) Training Arc As</li>
+                                <li class="mb-2">Lidia 🤝 Emilv</li>
+                                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                                <li class="mb-2">silvano d'orba? I hardly know her (lug - ago 2021)</li>
+                                <div class="d-flex justify-content-between">
+                                <li class="mb-2">Culo 2021</li>
+                                <i class="bi bi-people"></i>
+                                </div>
+                                <li class="mb-2">Frah Quintale Mix</li>
+                                <li class="mb-2">Francesco Guccini Mix</li>
+                                
                                 
                               </ul>
                         </div>
@@ -138,7 +151,7 @@
             <div id="main-body" class="col p-0 position-relative">
                 <div id="upper-bar" class="py-3 px-4 d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center">
-                        <a href="javascript:void(0)"><img src="./assets/svg/circle_arrow_left.svg" width="30px" alt=""
+                        <a href="javascript:void(0)" style="opacity: .5;"><img src="./assets/svg/circle_arrow_left.svg" width="30px" alt=""
                                 class="me-2"></a>
                         <a href="./album.html"><img src="./assets/svg/circle_arrow_right.svg" width="30px"
                                 alt=""></a>

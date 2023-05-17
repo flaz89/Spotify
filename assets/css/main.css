@@ -70,11 +70,13 @@
   height: calc(100vh - 80px);
   background-color: black;
 }
+#navbar ul {
+  list-style: none;
+}
 #navbar #list_comment {
-  padding: 0;
-  list-style-type: none;
   opacity: 50%;
   font-size: 0.8em;
+  scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
   overflow-y: scroll;
 }
 #navbar .bg_gradient1 {
