@@ -6,33 +6,32 @@ const upperBar = document.getElementById("upper-bar");
 
 //funzione per aprire e chiudere la "sidebar" di destra -------------------------------------- SIDEBAR
 toggleSidebar.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
+  sidebar.classList.toggle("active");
 });
 
 closeSidebar.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
+  sidebar.classList.toggle("active");
 });
 
 //funzione per cambiare il colore della "upper-bar" in fase di scrolling -------------------------------------- UPPER-BAR
 
 mainBody.addEventListener("scroll", function () {
-    const top = mainBody.scrollTop;
+  const top = mainBody.scrollTop;
 
-    if (top >= 130) {
-        upperBar.classList.add("active");
-        upperBar.classList.remove("inactive");
-
-    } else if (top < 130) {
-        upperBar.classList.remove("active");
-        upperBar.classList.add("inactive");
-    }
+  if (top >= 130) {
+    upperBar.classList.add("active");
+    upperBar.classList.remove("inactive");
+  } else if (top < 130) {
+    upperBar.classList.remove("active");
+    upperBar.classList.add("inactive");
+  }
 });
 
 //funzione per far faunzionare il "player" -------------------------------------- PLAYER
 function play() {
-    var audio = document.getElementById("audio");
-    audio.play();
-  }
+  var audio = document.getElementById("audio");
+  audio.play();
+}
 
   async function fetchData() {
     try {
@@ -77,16 +76,15 @@ function play() {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <h5 class="card-title">${array[i].album["title"]}</h5>
       </div>
     </div>
   </div>
-  </div>`    
-      
-    } catch (error) {
-      console.log("Fetch Error:", error);
-    }
+  </div>
+  </div>`;
+    
+  } catch (error) {
+    console.log("Fetch Error:", error);
   }
-  fetchData();
+  }
+fetchData();
