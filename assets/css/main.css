@@ -89,6 +89,12 @@
 #navbar .test1 {
   background-color: black;
 }
+#navbar a {
+  color: #a5a5a5;
+}
+#navbar a:hover {
+  color: white;
+}
 
 #main {
   overflow: hidden;
@@ -215,6 +221,12 @@
 
 .hidden {
   display: none;
+}
+
+#imgOrizzontale {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 a {

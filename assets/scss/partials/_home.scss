@@ -26,6 +26,13 @@
     .test1 {
         background-color: black;
     }
+
+    a {
+        color: #a5a5a5;
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 #main {
