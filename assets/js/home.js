@@ -50,16 +50,22 @@ function play() {
   for (let i = 0; i < array.length; i++) {
     console.log(array[i])
   
-    riga.innerHTML =  riga.innerHTML += `<div class="col-2 mb-4">
-    <div class="card h-100 d-flex">
-    <img src=${array[i].album['cover']} class="card-img-top" alt="...">
-    <div class="card-body">
-     <div class="d-flex flex-column">
-     <a class="btn btn-primary mb-1" href="indexBACK.html?id=">Modifica</a>
-     <a id="btnInfo" class="btn btn-success mb-1" href="indexDETAILS.html?id=">info</a>
-     </div>
-  </div>
-  </div></div>`
+    riga.innerHTML =  riga.innerHTML += ` <div class="col-2"> 
+    <a href="">
+    <div class="spotify-playlists">
+        <div class="list">
+            <div class="item">
+                <img src="assets/imgs/main/image-1.jpg" alt="">
+                <div class="play">
+                   <a href=""><img src="./assets/svg/player_card.svg"  class="btn_play " alt=""></a>
+                </div>
+                <h4>today'stop hi</h4>
+                <a href=""> <p>rema e selena gomez are on top of the</p> </a>
+            </div>
+        </div>
+    </div>
+</a>
+</div>`
   
   }
   
