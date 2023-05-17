@@ -64,6 +64,8 @@
   font-weight: 900;
   font-style: italic;
 }
+/* STRUTTURA */
+/* ---------------------------------------------------------------------------------------------- */
 #navbar {
   min-width: 350px;
   max-width: 350px;
@@ -97,6 +99,10 @@
 #navbar a:hover {
   color: white;
 }
+#navbar .fs-7-menu {
+  font-size: 0.8em;
+  font-weight: bolder;
+}
 
 #main {
   overflow: hidden;
@@ -106,7 +112,7 @@
   height: calc(100vh - 80px);
   overflow-y: scroll;
   scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
-  background-image: linear-gradient(to bottom right, #222222, #101010);
+  background: linear-gradient(to bottom, #222222, #101010);
 }
 
 #upper-bar {
@@ -149,10 +155,6 @@
 
 .dropdown-menu li:last-child {
   border-top: 1px solid #343434;
-}
-
-#playing-container-under {
-  background-image: linear-gradient(to top right, black, rgba(24, 24, 24, 0));
 }
 
 .col-custom-sidebar {
@@ -225,10 +227,63 @@
   display: none;
 }
 
-#imgOrizzontale {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+/* CARD PRINCIPALE */
+/* ---------------------------------------------------------------------------------------------- */
+#playing-container-under {
+  background: linear-gradient(15deg, black, #202020 80.71%);
+  font-size: 0.7em;
+  white-space: nowrap;
+}
+#playing-container-under #text-container {
+  display: flex;
+  flex-direction: column;
+}
+#playing-container-under h1 {
+  font-size: 65px;
+  font-weight: bolder;
+}
+#playing-container-under #btnAnnunci {
+  border-radius: 20px;
+  background-color: #242424;
+  border: 0;
+  padding: 5px 10px;
+  color: #808080;
+  font-size: 0.9em;
+  font-weight: 900;
+}
+#playing-container-under #btnAnnunci:hover {
+  color: #ababab;
+}
+#playing-container-under #btnPlay {
+  border-radius: 30px;
+  background-color: #2eb454;
+  border: 0;
+  padding: 12px 30px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+#playing-container-under #btnPlay:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 20px #2eb454;
+}
+#playing-container-under #btnSave {
+  border-radius: 30px;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.431);
+  padding: 12px 30px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+#playing-container-under #btnSave:hover {
+  scale: 1.1;
+}
+#playing-container-under strong {
+  color: #a5a5a5;
+}
+#playing-container-under strong:hover {
+  color: white;
 }
 
 a {
@@ -313,4 +368,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: black;
+  font-family: "Circular", sans-serif;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,7 @@
 @import "./partials/font";
 @import "./partials/home";
 @import "./partials/cardHome";
+@import "./partials/cardHeaders";
 
 body {
     height: 100vh;
@@ -8,4 +9,5 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: black;
+    font-family: "Circular", sans-serif;
 }
