@@ -78,11 +78,11 @@
   overflow-y: scroll;
 }
 #navbar .bg_gradient1 {
-  background: linear-gradient(100deg, #4832A5, #9198e5);
+  background: linear-gradient(100deg, #4832a5, #9198e5);
   margin-left: 2px;
 }
 #navbar .bg_gradient2 {
-  background-color: #02543A;
+  background-color: #02543a;
   color: #149643;
   margin-left: 2px;
 }
@@ -196,7 +196,7 @@
 #player #volumeControl {
   width: 80px;
   height: 4px;
-  background: #E9ECEF;
+  background: #e9ecef;
   -webkit-appearance: none;
 }
 #player #volumeControl::-webkit-slider-thumb {
@@ -215,6 +215,20 @@
 
 .hidden {
   display: none;
+}
+
+#imgOrizzontale {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.linkNav {
+  color: #818181;
+}
+
+.linkNav:hover {
+  color: white;
 }
 
 a {

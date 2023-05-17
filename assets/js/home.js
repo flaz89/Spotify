@@ -27,11 +27,7 @@ mainBody.addEventListener("scroll", function () {
   }
 });
 
-//funzione per far faunzionare il "player" -------------------------------------- PLAYER
-function play() {
-  var audio = document.getElementById("audio");
-  audio.play();
-}
+
 
 async function fetchData() {
   try {
@@ -50,7 +46,7 @@ async function fetchData() {
       console.log(array[i]);
 
       riga.innerHTML = riga.innerHTML += ` <div class="col-2"> 
-    <a href="">
+    <a href="../../album.html?albumid=${array[i].album.id}">
     <div class="spotify-playlists">
         <div class="list">
             <div class="item">
@@ -59,7 +55,7 @@ async function fetchData() {
                    <a href=""><img src="./assets/svg/player_card.svg"  class="btn_play " alt=""></a>
                 </div>
                 <h4>${array[i].album["title"]}</h4>
-                <a href=""> <p>${array[i].artist["name"]}</p> </a>
+                <a href="../../artist.html?artistid=${array[i].artist.id}"> <p>${array[i].artist["name"]}</p> </a>
             </div>
         </div>
     </div>
@@ -75,14 +71,24 @@ async function fetchData() {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">${array[i].album["title"]}</h5>
+        <h5 class="card-title">${array[5].album["title"]}</h5>
       </div>
     </div>
   </div>
   </div>
   </div>`;
+console.log(array[0].preview)
+ let audio = document.getElementById("audio");
+ audio.src = `'${array[0].preview}'`
+
   } catch (error) {
     console.log("Fetch Error:", error);
   }
 }
 fetchData();
+
+//funzione per far faunzionare il "player" -------------------------------------- PLAYER
+function play() {
+  var audio = document.getElementById("audio");
+  audio.play();
+}
