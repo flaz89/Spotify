@@ -89,6 +89,12 @@
 #navbar .test1 {
   background-color: black;
 }
+#navbar a {
+  color: #a5a5a5;
+}
+#navbar a:hover {
+  color: white;
+}
 
 #main {
   overflow: hidden;
@@ -221,14 +227,6 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.linkNav {
-  color: #818181;
-}
-
-.linkNav:hover {
-  color: white;
 }
 
 a {

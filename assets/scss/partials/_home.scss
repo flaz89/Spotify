@@ -25,7 +25,36 @@
 
   .test1 {
     background-color: black;
-  }
+
+    #list_comment {
+        padding: 0;
+        list-style-type: none;
+        opacity: 50%;
+        font-size: 0.8em;
+        overflow-y: scroll;
+    }
+
+    .bg_gradient1 {
+        background: linear-gradient(100deg, #4832A5, #9198e5);
+        margin-left: 2px;
+    }
+
+    .bg_gradient2 {
+        background-color: #02543A;
+        color: #149643;
+        margin-left: 2px;
+    }
+
+    .test1 {
+        background-color: black;
+    }
+
+    a {
+        color: #a5a5a5;
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 #main {
