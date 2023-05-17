@@ -64,7 +64,7 @@ function play() {
         </div>
     </div>
 </a>
-</div>a`
+</div>`
   
   }
   
