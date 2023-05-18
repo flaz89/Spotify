@@ -594,6 +594,8 @@ a {
 #body-container-album .icons-up:hover {
   color: white;
   cursor: pointer;
+}
+
 #back_image {
   background-image: url("https://www.sentireascoltare.com/wp-content/uploads/2013/09/Yellowcard-e1378645095989.jpg");
   background-size: cover;
