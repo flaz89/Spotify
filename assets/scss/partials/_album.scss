@@ -232,9 +232,26 @@
   #body-container-album {
     background-color: #1010102a;
 
+    #svg-container:hover {
+        border-radius: 50%;
+        scale: 1.1;
+        box-shadow: 0px 0px 20px#2eb454;
+        cursor: pointer;
+    }
+
+    /* svg:hover {
+        scale: 1.1;
+          box-shadow: 0px 0px 20px#2eb454;
+    }; */
+
     .icons-up {
         font-size: 25px;
         color: #a5a5a5;
+
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
     }
   }
   
