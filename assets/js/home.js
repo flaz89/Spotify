@@ -39,18 +39,17 @@ async function fetchData() {
     console.log("Data fetched", data);
     const riga = document.getElementById("cioChetiPiace");
     const array = data["data"];
-    console.log(array);
     for (let i = 0; i < array.length; i++) {
-      console.log(array[i]);
+      console.log(array[i].album.id);
 
-      riga.innerHTML = riga.innerHTML += ` <div class="col-2"> 
+      riga.innerHTML += ` <div class="col-2"> 
     <a href="../../album.html?albumid=${array[i].album.id}">
     <div class="spotify-playlists">
         <div class="list">
             <div class="item">
                 <img src=${array[i].album["cover"]} alt="Album Image">
                 <div class="play">
-                   <a href=""><img src="./assets/svg/player_card.svg"  class="btn_play " alt=""></a>
+                   <a onclick="play3(event)" id='player5' href=""><img src="./assets/svg/player_card.svg" class="btn_play " alt=""></a>
                 </div>
                 <h4>${array[i].album["title"]}</h4>
                 <a href="../../artist.html?artistid=${array[i].artist.id}"> <p>${array[i].artist["name"]}</p> </a>
@@ -75,7 +74,6 @@ async function fetchData() {
   </div>
   </div>
   </div>`;
-    console.log(array[0].preview);
     let audio = document.getElementById("audio");
     audio.src = `${array[0].preview}`;
   } catch (error) {
@@ -85,7 +83,41 @@ async function fetchData() {
 fetchData();
 
 //funzione per far faunzionare il "player" -------------------------------------- PLAYER
+let audio = document.getElementById("audio");
 function play() {
-  var audio = document.getElementById("audio");
-  audio.play();
+  return audio.paused ? audio.play() : audio.pause();
 }
+
+function play2() {
+  return audio.paused ? audio.play() : audio.pause();
+}
+
+function play3(event) {
+  event.preventDefault();
+  return audio.paused ? audio.play() : audio.pause();
+}
+
+ /*async function playMusic (event) {
+  const valore = await fetchData();
+  console.log(valore);
+  event.preventDefault();
+  if (valore[i].album.id == valore[i].album.id) {
+    let rigaPlayer = document.getElementById("rigaPlayer");
+    rigaPlayer.innerHTML = ` <div id="player" class="col-12 p-0">
+<div id="musicPlayer" class=" d-flex justify-content-between align-items-center pb-2">
+<div class="d-flex"> <!--all cover-->
+  <div><!--img-->
+      <img id="cover" src=${valore[i].album["cover"]} alt="">
+  </div>
+  <div class="ms-2 d-flex align-items-center"> <!--description-->
+      <div>
+          <p class="text-white m-0">${valore[i].album["title"]}</p>
+          <p class="text-white">${valore[i].artist["name"]}</p>
+      </div>
+      <div>
+          <i class="bi bi-heart text-white ps-4"></i>
+      </div>
+  </div>
+</div>`;
+  }
+};*/
