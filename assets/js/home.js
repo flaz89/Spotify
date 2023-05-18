@@ -49,7 +49,7 @@ async function fetchData() {
             <div class="item">
                 <img src=${array[i].album["cover"]} alt="Album Image">
                 <div class="play">
-                   <a onclick="play3(event)" id='player5' href=""><img src="./assets/svg/player_card.svg" class="btn_play " alt=""></a>
+                   <a onclick="play3(event, '${array[i].preview}')" id='player5' href=""><img src="./assets/svg/player_card.svg" class="btn_play " alt=""></a>
                 </div>
                 <h4>${array[i].album["title"]}</h4>
                 <a href="../../artist.html?artistid=${array[i].artist.id}"> <p>${array[i].artist["name"]}</p> </a>
@@ -84,10 +84,7 @@ for(let i = 0; i < 6; i++){
 </div>
 </a>
 </div>`;
-}    
-    let audio = document.getElementById("audio");
-    audio.src = `${array[0].preview}`;
-    return data;
+}   
   } catch (error) {
     console.log("Fetch Error:", error);
   }
@@ -104,9 +101,10 @@ function play2() {
   return audio.paused ? audio.play() : audio.pause();
 }
 
-function play3(event) {
+function play3(event, src) {
   event.preventDefault();
-  return audio.paused ? audio.play() : audio.pause();
+  audio.src = src;
+return audio.paused ? audio.play() : audio.pause();
 }
 
  /*async function playMusic (event) {
