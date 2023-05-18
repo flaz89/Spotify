@@ -362,6 +362,229 @@ a {
   text-decoration: underline;
 }
 
+/* STRUTTURA */
+/* ---------------------------------------------------------------------------------------------- */
+#navbar {
+  min-width: 350px;
+  max-width: 350px;
+  height: calc(100vh - 80px);
+  background-color: black;
+}
+#navbar ul {
+  list-style: none;
+}
+#navbar #list_comment {
+  opacity: 50%;
+  font-size: 0.8em;
+  scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
+  overflow-y: scroll;
+}
+#navbar .bg_gradient1 {
+  background: linear-gradient(100deg, #4832A5, #9198e5);
+  margin-left: 2px;
+}
+#navbar .bg_gradient2 {
+  background-color: #02543A;
+  color: #149643;
+  margin-left: 2px;
+}
+#navbar .test1 {
+  background-color: black;
+}
+#navbar a {
+  color: #a5a5a5;
+}
+#navbar a:hover {
+  color: white;
+}
+#navbar .fs-7-menu {
+  font-size: 0.8em;
+  font-weight: bolder;
+}
+
+#main {
+  overflow: hidden;
+}
+
+#main-body-album {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
+  background: linear-gradient(to bottom, #e5c651 0, #101010 500px);
+}
+
+#upper-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all 1.5s ease-out;
+}
+
+.active {
+  background: rgba(26, 0, 142, 0.574);
+}
+
+.inactive {
+  background-color: transparent;
+}
+
+.btn-account {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.dropdown-menu {
+  background-color: #282828;
+}
+
+.dropdown-menu button {
+  color: white;
+  margin: 10px 0;
+}
+
+.dropdown-menu button:hover {
+  background-color: #5e5e5e;
+  color: white;
+}
+
+.dropdown-menu li:last-child {
+  border-top: 1px solid #343434;
+}
+
+.col-custom-sidebar {
+  min-width: 280px;
+  max-width: 280px;
+  background: black;
+  transition: all 0.3s;
+  box-shadow: -4px 4px 30px rgba(0, 0, 0, 0.4);
+}
+.col-custom-sidebar i {
+  color: #a5a5a5;
+}
+.col-custom-sidebar i:hover {
+  color: #dbdbdb;
+}
+
+#sidebar.active {
+  margin-right: -280px;
+}
+
+.bg-color-sidebar-list {
+  background-color: black;
+  color: #a5a5a5;
+}
+.bg-color-sidebar-list h6 {
+  font-size: 0.8em;
+}
+.bg-color-sidebar-list p {
+  font-size: 0.7em;
+}
+.bg-color-sidebar-list:hover {
+  background-color: black;
+  color: #dbdbdb;
+}
+.bg-color-sidebar-list:focus {
+  background-color: black;
+}
+
+#player {
+  background-color: #181818;
+  border-top: 0.5px solid #343434;
+  position: absolute;
+  bottom: 0;
+}
+#player #cover {
+  width: 60px;
+  margin-left: 20px;
+}
+#player #volumeControl {
+  width: 80px;
+  height: 4px;
+  background: #e9ecef;
+  -webkit-appearance: none;
+}
+#player #volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+#player #volumeControl::-moz-range-thumb {
+  -webkit-appearance: none;
+}
+#player #volumeControl::-ms-thumb {
+  -webkit-appearance: none;
+}
+#player #test {
+  background-color: #181818;
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* CARD PRINCIPALE */
+/* ---------------------------------------------------------------------------------------------- */
+#playing-container-under-album {
+  background: transparent;
+  font-size: 0.7em;
+  white-space: nowrap;
+}
+#playing-container-under-album #text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+#playing-container-under-album h1 {
+  font-size: 80px;
+  font-weight: bolder;
+}
+#playing-container-under-album #btnAnnunci {
+  border-radius: 20px;
+  background-color: #242424;
+  border: 0;
+  padding: 5px 10px;
+  color: #808080;
+  font-size: 0.9em;
+  font-weight: 900;
+}
+#playing-container-under-album #btnAnnunci:hover {
+  color: #ababab;
+}
+#playing-container-under-album #btnPlay {
+  border-radius: 30px;
+  background-color: #2eb454;
+  border: 0;
+  padding: 12px 30px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+#playing-container-under-album #btnPlay:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 20px #2eb454;
+}
+#playing-container-under-album #btnSave {
+  border-radius: 30px;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.431);
+  padding: 12px 30px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+#playing-container-under-album #btnSave:hover {
+  scale: 1.1;
+}
+#playing-container-under-album strong {
+  color: #a5a5a5;
+}
+#playing-container-under-album strong:hover {
+  color: white;
+}
+
 body {
   height: 100vh;
   margin: 0;
