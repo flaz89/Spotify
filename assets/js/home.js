@@ -59,21 +59,32 @@ async function fetchData() {
 </a>
 </div>`;
     }
-
-    const riga2 = document.getElementById("buonasera");
-    riga2.innerHTML += `<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src=${array[5].album["cover"]} class="img-fluid rounded-start" alt="...">
+for(let i = 0; i < 6; i++){
+  const riga2 = document.getElementById("buonasera");
+    riga2.innerHTML += `<div class="col-6 col-md-4">
+    <a href="../../album.html?albumid=${array[i].album.id}">
+    <div class="card mb-3 mt-4 spotify-playlists2">
+    <div class="row g-0">
+        <div class="col-md-4 ">
+            <div class="d-flex w-50">
+                <img src=${array[i].album["cover"]} class="img-fluid" alt="...">
+                <img src=${array[i].artist["picture"]} class="img-fluid" alt="...">
+            </div>
+            <div class="d-flex w-50">
+                <img src=${array[i].artist["picture"]} class="img-fluid " alt="...">
+                <img src=${array[i].album["cover"]} class="img-fluid " alt="...">
+            </div>
+        </div>
+        <div class="col-md-8 d-flex align-items-center">
+            <div class="card-body ">
+                <h2 class="card-title text_title">${array[i].album["title"]}</h2>
+            </div>
+        </div>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">${array[5].album["title"]}</h5>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>`;
+</div>
+</a>
+</div>`;
+}    
     let audio = document.getElementById("audio");
     audio.src = `${array[0].preview}`;
   } catch (error) {
