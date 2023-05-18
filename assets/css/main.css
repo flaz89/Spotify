@@ -222,6 +222,19 @@
   background-color: #181818;
   border: none;
 }
+#player .dot_hover {
+  opacity: 0;
+}
+#player .dot_hover:hover {
+  opacity: 1;
+  top: 40%;
+}
+#player .toggle_music {
+  color: #a5a5a5;
+}
+#player .toggle_music:hover {
+  color: white;
+}
 
 .hidden {
   display: none;
