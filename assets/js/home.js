@@ -87,6 +87,7 @@ for(let i = 0; i < 6; i++){
 }    
     let audio = document.getElementById("audio");
     audio.src = `${array[0].preview}`;
+    return data;
   } catch (error) {
     console.log("Fetch Error:", error);
   }

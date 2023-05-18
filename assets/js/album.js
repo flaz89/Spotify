@@ -52,12 +52,27 @@ async function fetchAlbum() {
      </div>
  </div>
 </div>`
-     /* const trackS = data.tracks.data;
+     const trackS = data.tracks.data;
       console.log(trackS)
+      let songAlbum = document.getElementById('body-container-under')
+
       for (let i = 0; i < trackS.length; i++) {
-        console.log(trackS[i])
-      }*/
-    
+        songAlbum.innerHTML += `
+        <div id="album-song" class="row d-flex align-items-center text-white px-4 py-2">
+                            <div class="col d-flex align-items-center">
+                                <div class="d-flex align-items-center me-3 fs-5"><p class="m-0">${i+1}</p></div>
+                                <div>
+                                    <a href=""><h6 class="mb-1 text-white">${trackS[i].title}</h6></a>
+                                    <a href=""><p id="artist-link" class="m-0">${trackS[i].artist['name']}</p></a>
+                                </div>
+                            </div>
+                            <div class="col text-end"><p class="m-0">${trackS[i].rank}</p></div>
+                            <div class="col-3 text-end"><p class="m-0">${Math.trunc(trackS[i].duration / 60)}:${((trackS[i].duration / 60) * 10).toFixed(0)}</p> </div>
+                        </div>
+        `
+      }
+      let audio = document.getElementById("audio");
+      audio.src = `${trackS[0].preview}`;
     } catch (error) {
       console.log("Fetch Error:", error);
     }
@@ -65,4 +80,17 @@ async function fetchAlbum() {
   fetchAlbum();
   
   
-  
+  let audio = document.getElementById("audio");
+function play() {
+  return audio.paused ? audio.play() : audio.pause();
+}
+
+function play2() {
+  return audio.paused ? audio.play() : audio.pause();
+}
+
+function play3(event) {
+  event.preventDefault();
+  return audio.paused ? audio.play() : audio.pause();
+}
+
