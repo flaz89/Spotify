@@ -410,7 +410,7 @@ a {
   height: calc(100vh - 80px);
   overflow-y: scroll;
   scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
-  background: linear-gradient(to bottom, #e5c651 0, #101010 500px);
+  background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
 }
 
 #upper-bar {
@@ -525,64 +525,48 @@ a {
   display: none;
 }
 
-/* CARD PRINCIPALE */
+/* CARD PRINCIPALE - Album */
 /* ---------------------------------------------------------------------------------------------- */
 #playing-container-under-album {
   background: transparent;
   font-size: 0.7em;
   white-space: nowrap;
 }
+#playing-container-under-album #album-image {
+  box-shadow: 2px 2px 30px rgb(27, 27, 27);
+  align-self: center;
+}
 #playing-container-under-album #text-container {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  justify-content: end;
 }
 #playing-container-under-album h1 {
   font-size: 80px;
   font-weight: bolder;
 }
-#playing-container-under-album #btnAnnunci {
-  border-radius: 20px;
-  background-color: #242424;
-  border: 0;
-  padding: 5px 10px;
-  color: #808080;
-  font-size: 0.9em;
-  font-weight: 900;
-}
-#playing-container-under-album #btnAnnunci:hover {
-  color: #ababab;
-}
-#playing-container-under-album #btnPlay {
-  border-radius: 30px;
-  background-color: #2eb454;
-  border: 0;
-  padding: 12px 30px;
-  color: black;
+#playing-container-under-album h6 {
   font-size: 1.2em;
-  font-weight: 900;
 }
-#playing-container-under-album #btnPlay:hover {
-  scale: 1.1;
-  box-shadow: 0px 0px 20px #2eb454;
-}
-#playing-container-under-album #btnSave {
-  border-radius: 30px;
-  background-color: black;
-  border: 1px solid rgba(255, 255, 255, 0.431);
-  padding: 12px 30px;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 900;
-}
-#playing-container-under-album #btnSave:hover {
-  scale: 1.1;
+#playing-container-under-album span {
+  font-weight: 200;
+  opacity: 0.5;
 }
 #playing-container-under-album strong {
   color: #a5a5a5;
 }
 #playing-container-under-album strong:hover {
   color: white;
+}
+
+/* LISTA CANZONI - Album */
+/* ---------------------------------------------------------------------------------------------- */
+#body-container-album {
+  background-color: rgba(16, 16, 16, 0.1647058824);
+}
+#body-container-album .icons-up {
+  font-size: 25px;
+  color: #a5a5a5;
 }
 
 body {
