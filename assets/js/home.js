@@ -27,8 +27,6 @@ mainBody.addEventListener("scroll", function () {
   }
 });
 
-
-
 async function fetchData() {
   try {
     const response = await fetch(
@@ -77,10 +75,9 @@ async function fetchData() {
   </div>
   </div>
   </div>`;
-console.log(array[0].preview)
- let audio = document.getElementById("audio");
- audio.src = `'${array[0].preview}'`
-
+    console.log(array[0].preview);
+    let audio = document.getElementById("audio");
+    audio.src = `${array[0].preview}`;
   } catch (error) {
     console.log("Fetch Error:", error);
   }
