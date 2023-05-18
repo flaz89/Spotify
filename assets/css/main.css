@@ -594,6 +594,30 @@ a {
 #body-container-album .icons-up:hover {
   color: white;
   cursor: pointer;
+#back_image {
+  background-image: url("https://www.sentireascoltare.com/wp-content/uploads/2013/09/Yellowcard-e1378645095989.jpg");
+  background-size: cover;
+}
+
+#play3 {
+  width: 50px;
+}
+
+.img_circle {
+  width: 90px;
+}
+
+.img_album_artist {
+  width: 100px;
+}
+
+.artist {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.b_title {
+  font-weight: 600;
 }
 
 body {
