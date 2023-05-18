@@ -220,6 +220,9 @@
   h1 {
     font-size: 65px;
     font-weight: bolder;
+    white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
   }
 
 

@@ -206,6 +206,9 @@
     h1 {
         font-size: 80px;
         font-weight: bolder;
+        white-space:pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     h6 {

@@ -254,6 +254,9 @@
 #playing-container-under h1 {
   font-size: 65px;
   font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #playing-container-under #btnAnnunci {
   border-radius: 20px;
@@ -572,6 +575,9 @@ a {
 #playing-container-under-album h1 {
   font-size: 80px;
   font-weight: bolder;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #playing-container-under-album h6 {
   font-size: 1.2em;
