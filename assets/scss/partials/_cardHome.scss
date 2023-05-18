@@ -73,3 +73,19 @@ a {
 .spotify-playlists .list .item p:hover {
   text-decoration: underline;
 }
+
+.spotify-playlists2 {
+  background-color: #2c2c2c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+.spotify-playlists2 h2 {
+  font-size: 0.8em;
+  color: white;
+}
+
+.spotify-playlists2:hover {
+  background-color: #252525;
+}
