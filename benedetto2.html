@@ -10,20 +10,249 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <style>
-    .text_title{
-
+    #play3{
+        width: 50px;
     }
 
+    .list_width{
+        width: 120%;
+    }
+
+    #testp{
+        background-image: url("./assets/imgs/main/image-1.jpg");
+        background-size: cover;
+    }
     
 </style>
 
-<body>
+<body class="bg-dark">
+    <div id="main-body" class="col p-0 position-relative">
+        <div id="testp">
+        <div id="upper-bar" class="py-3 px-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <a href="./album.html"><img src="./assets/svg/circle_arrow_left.svg" width="30px" alt=""
+                        class="me-2"></a>
+                <a href="javascript:void(0)"><img style="opacity: .5;" src="./assets/svg/circle_arrow_right.svg" width="30px"
+                        alt=""></a>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <div class="dropdown">
+                    <button class="btn-account dropdown-toggle d-flex align-items-center" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="rounded-circle me-2"
+                            src="https://static.sky.it/editorialimages/277e8ac0d513fd95ebc81c5a06285e78133f9515/skytg24/it/lifestyle/approfondimenti/giornata-gatto-buongiorno-frasi-immagini/giornata-gatto-buongiorno-frasi-immagini-00-canva.jpg"
+                            width="21" style="aspect-ratio:1;" alt="">
+                        Lidia Nautilus...
+                    </button>
+
+                    <ul class="dropdown-menu mt-2">
+                        <li><button class="dropdown-item d-flex justify-content-between" type="button">Account<i
+                                    class="bi bi-box-arrow-up-right ms-3 pe-3 row align-items-center"></i></button>
+                        </li>
+                        <li><button class="dropdown-item d-flex justify-content-between" type="button">Configura
+                                il
+                                tuo piano familiy<i
+                                    class="bi bi-box-arrow-up-right ms-3 pe-3 row align-items-center"></i></button>
+                        </li>
+                        <li><button class="dropdown-item" type="button">Profilo</button></li>
+                        <li><button class="dropdown-item" type="button">Sessione privata</button></li>
+                        <li><button class="dropdown-item" type="button">Impostazioni</button></li>
+                        <li><button class="dropdown-item" type="button">Esci</button></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" id="toggleSidebar"><img src="./assets/svg/friends_sidebar.svg"
+                        width="40px" alt=""></a>
+            </div>
+        </div>
+        
+        <div id="playing-container" class="d-flex w-100" style="height:250px; border: 1px solid red;">
+            <div id="playing-container-under" class="mx-4 w-100" style="width:100%; border: 1px solid red;">
+                
+            </div>
+        </div>
+        </div>
+        <div id="body-container" class="d-flex w-100 h-100" style="border: 1px solid red;">
+            <div id="body-container-under" class="mx-4 mt-4 w-100" style="width:100%; border: 1px solid red;">
+                <div class="row" id="buonasera">
+                    <h2>Buonasera</h2>
+                </div>
+                <div class="row" id="cioChetiPiace">
+                <h2>Altro di cio che ti piace</h2>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+<hr>
+    
+    <div class="d-flex align-items-center mb-4">
+      <a href=""><img id="play3" class="ms-4" src="./assets/svg/player_card.svg" alt=""></a>
+      <button type="button" class="btn btn-outline-light ms-4">FOLLOWING</button>
+      <div class="dropdown ms-4">
+        <a href="#" class="text-decoration-none"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>•••</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                <h5 class="text-white ms-4">Popolari</h5>
+                    <!-- <div class="d-flex flex-column flex-md-row align-items-center justify-content-center ">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3 list_width" aria-current="true">
+                            <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                            <div class="d-flex gap-2 w-100">
+                              <div class="d-flex">
+                                <h6 class="mb-0">List group item heading</h6>
+                                <p class="mb-0 opacity-75">276.618.934</p>
+                                <p class="opacity-75">3.18</p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                            <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                              <div class="d-flex align-items-center">
+                                <h6 class="mb-0">Another title here</h6>
+                                <p class="mb-0 opacity-75">276.618.934</p>
+                                <p class="opacity-75">3.40</p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                            <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                              <div class="d-flex">
+                                <h6 class="mb-0">Third heading</h6>
+                                <p class="mb-0 opacity-75">276.618.934</p>
+                                <p class="opacity-75">2.00</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div> -->
+                      <ol>
+                        <li class="text-white">
+                            <div class="d-flex align-items-center justify-content-between">
+                            <img src="./assets/imgs/main/image-8.jpg" alt="" style="width: 100px;">
+                            <h5>shadhksagbhfag</h5>
+                            <p class="opacity-75">khassd</p>
+                            </div>
+                        </li>  
+                    </ol>
+
+                    </div>
+
+            <div class="col-4">
+                <div class="ms-4 d-flex flex-column">
+                    <h5 class="text-white mb-4">brani che ti piacciono</h5>
+                    <div class="d-flex align-items-center">
+                    <img src="./assets/imgs/main/image-1.jpg" class="rounded-circle" alt="" style="width: 100px;">
+                    <div class="d-flex flex-column ms-2">
+                    <h5 class="text-white">Hai messo mi piace a 11 brani</h5>
+                    <p class=" text-white opacity-75" >Di yellow</p>
+                </div>
+                    </div>
+                </div>
+            </div>
+     
+        </div>
+    </div>
 
 
 
 
+    <!-- <ol>
+        <li class="text-white d-flex align-items-center justify-content-between">
+            <img src="./assets/imgs/main/image-1.jpg" alt="" style="width: 100px;">
+            <h5>shadhksagbhfag</h5>
+            <p class="opacity-75">khassd</p>
+        </li>
+        <li class="text-white d-flex align-items-center justify-content-between mt-4">
+            <img src="./assets/imgs/main/image-1.jpg" alt="" style="width: 100px;">
+            <h5>shadhksagbhfag</h5>
+            <p class="opacity-75">khassd</p>
+        </li>
+        <li class="text-white d-flex align-items-center justify-content-between mt-4">
+            <img src="./assets/imgs/main/image-1.jpg" alt="" style="width: 100px;">
+            <h5>shadhksagbhfag</h5>
+            <p class="opacity-75">khassd</p>
+        </li>
+       
+    </ol> -->
+
+
+    <!-- <div class="d-flex ms-4 mt-4">
+        <div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center ">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div>
+                        <h6 class="mb-0">List group item heading</h6>
+                        <p class="mb-0 opacity-75">276.618.934</p>
+                        <p class="opacity-75">3.18</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <h6 class="mb-0">Another title here</h6>
+                        <p class="mb-0 opacity-75">276.618.934</p>
+                        <p class="opacity-75">3.40</p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                    <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                    <div class="d-flex gap-2 w-100 justify-content-between">
+                      <div>
+                        <h6 class="mb-0">Third heading</h6>
+                        <p class="mb-0 opacity-75">276.618.934</p>
+                        <p class="opacity-75">2.00</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+        </div>
+       
+        <div class="ms-4 d-flex flex-column">
+            <h5 class="text-white mb-4">brani che ti piacciono</h5>
+            <div class="d-flex align-items-center">
+            <img src="./assets/imgs/main/image-1.jpg" class="rounded-circle" alt="" style="width: 100px;">
+            <div class="d-flex flex-column ms-2">
+            <h5 class="text-white">Hai messo mi piace a 11 brani</h5>
+            <p class=" text-white opacity-75" >Di yellow</p>
+        </div>
+            </div>
+        </div>
+    </div> -->
   
       
+    
+      
+    
+    
+
+
+<!-- 
     <div class="card mb-3 mt-4 ms-4" style="max-width: 280px;">
         <div class="row g-0">
             <div class="col-md-4 ">
@@ -43,10 +272,7 @@
             </div>
         </div>
     </div>
-      
-  
-    
-
+ -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
