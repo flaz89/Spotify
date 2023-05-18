@@ -39,6 +39,39 @@ async function fetchData() {
     console.log("Data fetched", data);
     const riga = document.getElementById("cioChetiPiace");
     const array = data["data"];
+
+  //---------------------------------------------------------- RANDOM SONG HEADER
+    const randomSong = Math.floor(Math.random() * 25) + 1;
+    console.log(randomSong);
+    console.log(array[0]);
+
+    document.getElementById("playing-container").innerHTML += 
+    `<div id="playing-container-under" class=" px-3 w-100 d-flex">
+        <img src="${array[randomSong].album.cover_big}" height="100%" class="py-4" alt="">
+        <div id="text-container" class="ps-4 my-2 w-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="text-white m-0 fw-bolder">ALBUM</p>
+                <button id="btnAnnunci">NASCONDI ANNUNCI</button>
+            </div>
+           <div id="containerTextScroll" class="overflow-hidden d-flex"><div class="scrollingText"><h1 class="m-0 text-white scrollingText">${array[randomSong].title}</span></h1></div></div>
+            <h6 class="mb-3 text-white">${array[randomSong].artist.name}</h6>
+            <h6 class="text-white">Ascolta il nuovo singolo di ${array[randomSong].artist.name}!</h6>
+            <div class="d-flex align-items-center gap-3 mt-1">
+                <button type="button" onclick="play2(${array[randomSong].preview})" id="btnPlay">Play</button>
+                <button id="btnSave">Save</button>
+                <a href="javascript:void(0)"><strong class="p-1 ms-2 fs-4">•••</strong></a>
+            </div>
+        </div>
+    </div>`
+
+
+
+
+
+
+
+
+
     for (let i = 0; i < array.length; i++) {
       console.log(array[i].album.id);
 
