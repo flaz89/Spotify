@@ -54,7 +54,7 @@
     height: calc(100vh - 80px);
     overflow-y: scroll;
     scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
-    background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
+    //background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
   }
   
   #upper-bar {
@@ -229,6 +229,11 @@
   /* LISTA CANZONI - Album */
   /* ---------------------------------------------------------------------------------------------- */
 
+  .song-color{
+    background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
+    background-attachment: fixed;
+  }
+
   #body-container-album {
     background-color: #1010102a;
 
@@ -239,11 +244,6 @@
         cursor: pointer;
     }
 
-    /* svg:hover {
-        scale: 1.1;
-          box-shadow: 0px 0px 20px#2eb454;
-    }; */
-
     .icons-up {
         font-size: 25px;
         color: #a5a5a5;
@@ -253,7 +253,42 @@
             cursor: pointer;
         }
     }
+
+    #header-playlist-album {
+      h6, i {
+        font-size: 0.8em;
+        color: #5e5e5e;
+      }
+    }
+
+    #album-song {
+
+      &:hover {
+        background-color: #a5a5a538;
+      }
+
+      h6 {
+        font-size: 0.9em;
+        color: #5e5e5e;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        font-size: 0.8em;
+        color: #5e5e5e;
+        font-weight: bold;
+      }
+
+      #artist-link {
+        &:hover {
+          text-decoration: underline;
+          color: white;
+        }
+    }
+    }
+    
   }
-  
   
   

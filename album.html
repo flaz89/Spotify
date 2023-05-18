@@ -22,7 +22,7 @@
 
     <!---------------------------------------------------------------------------------------- MAIN -->
     <main>
-        <div id="main" class="row m-0">
+        <div id="main" class="row m-0 song-color">
             <!---------------------------------------------------------------------------------------- NAVBAR -->
             <div id="navbar" class="col-3 p-0">
                 <nav class="col pb-0 test1 h-100">
@@ -221,16 +221,43 @@
                                     <path d="M10.29,8.41l-3.5,2.5c-.09,.06-.19,.09-.29,.09-.28,0-.5-.22-.5-.5V5.5c0-.1,.03-.2,.09-.29,.16-.22,.47-.27,.7-.11l3.5,2.5s.08,.07,.11,.11c.16,.23,.11,.54-.11,.7Z"/>
                                   </svg>
                             </div>
-                            
                             <i class="bi bi-heart icons-up"></i>
                             <i class="bi bi-arrow-down-circle icons-up"></i>
                             <strong class="icons-up">•••</strong>
                         </div>
-                        <div class="row">
-                            <div class="col"><h6># TITOLO</h6></div>
-                            <div class="col"><h6>RIPRODUZIONI</h6></div>
-                            <div class="col-2"><i class="bi bi-clock"></i></div>
+
+                        <div id="header-playlist-album" class="row d-flex align-items-center text-white px-4 mt-5">
+                            <div class="col"><h6 class="m-0"><span class="pe-2">#</span> TITOLO</h6></div>
+                            <div class="col text-end"><h6 class="m-0">RIPRODUZIONI</h6></div>
+                            <div class="col-3 text-end"><i class="bi bi-clock d-flex align-items-center justify-content-end"></i></div>
                         </div>
+
+                        <hr class="mt-2"style="color: #5e5e5e">
+
+                        <div id="album-song" class="row d-flex align-items-center text-white px-4 mt-4 py-2">
+                            <div class="col d-flex align-items-center">
+                                <div class="d-flex align-items-center me-3 fs-5"><p class="m-0">1</p></div>
+                                <div>
+                                    <a href=""><h6 class="mb-1 text-white">Montanelli - Intro</h6></a>
+                                    <a href=""><p id="artist-link" class="m-0">Pinguini Tattici Nucleari</p></a>
+                                </div>
+                            </div>
+                            <div class="col text-end"><p class="m-0">694.578</p></div>
+                            <div class="col-3 text-end"><p class="m-0">1:28</p> </div>
+                        </div>
+
+                        <div id="album-song" class="row d-flex align-items-center text-white px-4 py-2">
+                            <div class="col d-flex align-items-center">
+                                <div class="d-flex align-items-center me-3 fs-5"><p class="m-0">1</p></div>
+                                <div>
+                                    <a href=""><h6 class="mb-1 text-white">Montanelli - Intro</h6></a>
+                                    <a href=""><p id="artist-link" class="m-0">Pinguini Tattici Nucleari</p></a>
+                                </div>
+                            </div>
+                            <div class="col text-end"><p class="m-0">694.578</p></div>
+                            <div class="col-3 text-end"><p class="m-0">1:28</p> </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -303,7 +330,7 @@
 
     <!---------------------------------------------------------------------------------------- PLAYER -->
     <section>
-        <div class="row m-0">
+        <div id="rigaPlayer" class="row m-0">
             <div id="player" class="col-12 p-0">
                 <div id="musicPlayer" class=" d-flex justify-content-between align-items-center pb-2">
                     <div class="d-flex"> <!--all cover-->
@@ -323,20 +350,27 @@
                     <div> <!--player-->
                         <div class="d-flex flex-column align-items-center">
                             <div class="mb-2 ms-2 d-flex align-items-center">
-                                <div>
-                                    <a href="" class="me-4 text-success fs-5"><i class="bi bi-shuffle"></i></a>
-                                    <a href="" class="me-4 text-white fs-5"><i class="bi bi-skip-backward-fill"></i></a>
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column">
+                                    <a href="" class="me-4 toggle_music fs-5"><i class="bi bi-shuffle"></i></a>
+                                    <i class="bi bi-dot text-success dot_hover position-absolute"></i>
+                                </div>
+                                    <a href="" class="me-4 toggle_music fs-5"><i class="bi bi-skip-backward-fill"></i></a>
                                 </div>
                                 <div>
-                                    <button id="test" type="button" onclick="play()" class="me-4 text-white fs-2"><i
+                                    <button id="test" type="button" onclick="play()" class="me-4 fs-2 toggle_music"><i
                                             class="bi bi-play-circle-fill"></i></button>
 
                                     <audio id="audio"
-                                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
+                                         type="audio/mpeg"></audio>
                                 </div>
-                                <div>
-                                    <a href="" class="me-4 text-white fs-5"><i class="bi bi-skip-forward-fill"></i></a>
-                                    <a href="" class="me-4 text-success fs-5"><i class="bi bi-repeat"></i></a>
+                                <div class="d-flex">
+                                    <a href="" class="me-4 fs-5 toggle_music"><i class="bi bi-skip-forward-fill"></i></a>
+                                    <div class="d-flex flex-column">
+                                        <a href="" class="me-4  fs-5 position-relative toggle_music"><i class="bi bi-arrow-repeat"></i></a>
+                                        <i class="bi bi-dot dot_hover text-success position-absolute"></i>
+                                    </div>
+                          
                                 </div>
 
                             </div>

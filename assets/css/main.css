@@ -423,7 +423,6 @@ a {
   height: calc(100vh - 80px);
   overflow-y: scroll;
   scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
-  background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
 }
 
 #upper-bar {
@@ -574,12 +573,13 @@ a {
 
 /* LISTA CANZONI - Album */
 /* ---------------------------------------------------------------------------------------------- */
+.song-color {
+  background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
+  background-attachment: fixed;
+}
+
 #body-container-album {
   background-color: rgba(16, 16, 16, 0.1647058824);
-  /* svg:hover {
-      scale: 1.1;
-        box-shadow: 0px 0px 20px#2eb454;
-  }; */
 }
 #body-container-album #svg-container:hover {
   border-radius: 50%;
@@ -595,12 +595,34 @@ a {
   color: white;
   cursor: pointer;
 }
+#body-container-album #header-playlist-album h6, #body-container-album #header-playlist-album i {
+  font-size: 0.8em;
+  color: #5e5e5e;
+}
+#body-container-album #album-song:hover {
+  background-color: rgba(165, 165, 165, 0.2196078431);
+}
+#body-container-album #album-song h6 {
+  font-size: 0.9em;
+  color: #5e5e5e;
+}
+#body-container-album #album-song h6:hover {
+  text-decoration: underline;
+}
+#body-container-album #album-song p {
+  font-size: 0.8em;
+  color: #5e5e5e;
+  font-weight: bold;
+}
+#body-container-album #album-song #artist-link:hover {
+  text-decoration: underline;
+  color: white;
+}
 
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
   font-family: "Circular", sans-serif;
 }/*# sourceMappingURL=main.css.map */
