@@ -59,9 +59,9 @@ async function fetchData() {
 </a>
 </div>`;
     }
-for(let i = 0; i < 6; i++){
-  const riga2 = document.getElementById("buonasera");
-    riga2.innerHTML += `<div class="col-6 col-md-4">
+    for (let i = 0; i < 6; i++) {
+      const riga2 = document.getElementById("buonasera");
+      riga2.innerHTML += `<div class="col-6 col-md-4">
     <a href="../../album.html?albumid=${array[i].album.id}">
     <div class="card mb-3 mt-4 spotify-playlists2">
     <div class="row g-0">
@@ -84,7 +84,7 @@ for(let i = 0; i < 6; i++){
 </div>
 </a>
 </div>`;
-}   
+    }
   } catch (error) {
     console.log("Fetch Error:", error);
   }
@@ -93,21 +93,23 @@ fetchData();
 
 //funzione per far faunzionare il "player" -------------------------------------- PLAYER
 let audio = document.getElementById("audio");
-function play() {
+function play(src) {
+  audio.src = src;
   return audio.paused ? audio.play() : audio.pause();
 }
 
-function play2() {
+function play2(src) {
+  audio.src = src;
   return audio.paused ? audio.play() : audio.pause();
 }
 
 function play3(event, src) {
   event.preventDefault();
   audio.src = src;
-return audio.paused ? audio.play() : audio.pause();
+  return audio.paused ? audio.play() : audio.pause();
 }
 
- /*async function playMusic (event) {
+/*async function playMusic (event) {
   const valore = await fetchData();
   console.log(valore);
   event.preventDefault();
