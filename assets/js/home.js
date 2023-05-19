@@ -15,15 +15,17 @@ closeSidebar.addEventListener("click", function () {
 
 //funzione per cambiare il colore della "upper-bar" in fase di scrolling -------------------------------------- UPPER-BAR
 
+const red = Math.floor(Math.random() * 256);
+const green = Math.floor(Math.random() * 256);
+const blue = Math.floor(Math.random() * 256);
+
 mainBody.addEventListener("scroll", function () {
   const top = mainBody.scrollTop;
 
   if (top >= 130) {
-    upperBar.classList.add("active");
-    upperBar.classList.remove("inactive");
+    upperBar.style.backgroundColor = `rgb(${red}, ${green}, ${blue}, .6)`;
   } else if (top < 130) {
-    upperBar.classList.remove("active");
-    upperBar.classList.add("inactive");
+    upperBar.style.backgroundColor = `transparent`;
   }
 });
 
