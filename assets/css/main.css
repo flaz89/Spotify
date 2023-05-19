@@ -251,12 +251,29 @@
   display: flex;
   flex-direction: column;
 }
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 #playing-container-under h1 {
   font-size: 65px;
   font-weight: bolder;
-  white-space: nowrap;
+}
+#playing-container-under #containerTextScroll {
+  max-width: 860px;
   overflow: hidden;
+  position: relative;
+}
+#playing-container-under .scrollingText {
+  flex: 1;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  animation: slide 15s linear infinite;
+  animation-delay: 4s;
 }
 #playing-container-under #btnAnnunci {
   border-radius: 20px;
