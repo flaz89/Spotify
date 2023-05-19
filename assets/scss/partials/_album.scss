@@ -2,296 +2,313 @@
 /* ---------------------------------------------------------------------------------------------- */
 
 #navbar {
-    min-width: 350px;
-    max-width: 350px;
-    height: calc(100vh - 80px);
-    background-color: black;
-  
-    ul {
-      list-style: none;
-    }
-  
-      #list_comment {
-          opacity: 50%;
-          font-size: 0.8em;
-          scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
-          overflow-y: scroll;
-      }
-  
-      .bg_gradient1 {
-          background: linear-gradient(100deg, #4832A5, #9198e5);
-          margin-left: 2px;
-      }
-  
-      .bg_gradient2 {
-          background-color: #02543A;
-          color: #149643;
-          margin-left: 2px;
-      }
-  
-      .test1 {
-          background-color: black;
-      }
-  
-      a {
-          color: #a5a5a5;
-          &:hover {
-              color: white;
-          }
-      }
-  
-      .fs-7-menu {
-        font-size: 0.8em;
-        font-weight: bolder;
-      }
+  min-width: 350px;
+  max-width: 350px;
+  height: calc(100vh - 80px);
+  background-color: black;
+
+  ul {
+    list-style: none;
   }
-  
-  #main {
-    overflow: hidden;
-  }
-  
-  #main-body-album {
-    height: calc(100vh - 80px);
-    overflow-y: scroll;
+
+  #list_comment {
+    opacity: 50%;
+    font-size: 0.8em;
     scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
-    //background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
+    overflow-y: scroll;
   }
-  
-  #upper-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    -webkit-transition: all 1.5s ease-out;
-    -moz-transition: all 1.5s ease-out;
-    -o-transition: all 1.5s ease-out;
-    transition: all 1.5s ease-out;
+
+  .bg_gradient1 {
+    background: linear-gradient(100deg, #4832A5, #9198e5);
+    margin-left: 2px;
   }
-  
-  .active {
-    background: rgba(26, 0, 142, 0.574);
+
+  .bg_gradient2 {
+    background-color: #02543A;
+    color: #149643;
+    margin-left: 2px;
   }
-  
-  .inactive {
-    background-color: transparent;
-  }
-  
-  .btn-account {
+
+  .test1 {
     background-color: black;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding-right: 10px;
-    font-size: 15px;
   }
-  
-  .dropdown-menu {
-    background-color: #282828;
-  }
-  
-  .dropdown-menu button {
-    color: white;
-    margin: 10px 0;
-  }
-  
-  .dropdown-menu button:hover {
-    background-color: #5e5e5e;
-    color: white;
-  }
-  
-  .dropdown-menu li:last-child {
-    border-top: 1px solid #343434;
-  }
-  
-  .col-custom-sidebar {
-    min-width: 280px;
-    max-width: 280px;
-    background: black;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    box-shadow: -4px 4px 30px rgba(0, 0, 0, 0.4);
-  
-    i {
-      color: #a5a5a5;
-  
-      &:hover {
-        color: #dbdbdb;
-      }
-    }
-  }
-  
-  #sidebar.active {
-    margin-right: -280px;
-  }
-  
-  .bg-color-sidebar-list {
-    background-color: black;
+
+  a {
     color: #a5a5a5;
-  
-    h6 {
-      font-size: 0.8em;
-    }
-  
-    p {
-      font-size: 0.7em;
-    }
-  
+
     &:hover {
-      background-color: black;
+      color: white;
+    }
+  }
+
+  .fs-7-menu {
+    font-size: 0.8em;
+    font-weight: bolder;
+  }
+}
+
+#main {
+  overflow: hidden;
+}
+
+#main-body-album {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  scrollbar-color: #5e5e5e rgba(0, 0, 0, 0);
+}
+
+#upper-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: all 1.5s ease-out;
+  -moz-transition: all 1.5s ease-out;
+  -o-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+
+.active {
+  background: rgba(26, 0, 142, 0.574);
+}
+
+.inactive {
+  background-color: transparent;
+}
+
+.btn-account {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.dropdown-menu {
+  background-color: #282828;
+}
+
+.dropdown-menu button {
+  color: white;
+  margin: 10px 0;
+}
+
+.dropdown-menu button:hover {
+  background-color: #5e5e5e;
+  color: white;
+}
+
+.dropdown-menu li:last-child {
+  border-top: 1px solid #343434;
+}
+
+.col-custom-sidebar {
+  min-width: 280px;
+  max-width: 280px;
+  background: black;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  box-shadow: -4px 4px 30px rgba(0, 0, 0, 0.4);
+
+  i {
+    color: #a5a5a5;
+
+    &:hover {
       color: #dbdbdb;
     }
-  
-    &:focus {
-      background-color: black;
-    }
   }
-  
-  #player {
-    background-color: #181818;
-      border-top: .5px solid #343434;
-    position: absolute;
-    bottom: 0;
-  
-    #cover {
-      width: 60px;
-      margin-left: 20px;
-    }
-  
-    #volumeControl {
-      width: 80px;
-      height: 4px;
-      background: #e9ecef;
-      -webkit-appearance: none;
-    }
-    #volumeControl::-webkit-slider-thumb {
-      -webkit-appearance: none;
-    }
-  
-    #volumeControl::-moz-range-thumb {
-      -webkit-appearance: none;
-    }
-  
-    #volumeControl::-ms-thumb {
-      -webkit-appearance: none;
-    }
-  
-    #test {
-      background-color: #181818;
-      border: none;
-    }
-  }
-  
-  .hidden {
-    display: none;
-  }
-  /* CARD PRINCIPALE - Album */
-  /* ---------------------------------------------------------------------------------------------- */
-  
-  #playing-container-under-album {
-    background: transparent;
-    font-size: 0.7em;
-    white-space: nowrap;
+}
 
-    #album-image {
-        box-shadow: 2px 2px 30px rgb(27, 27, 27);
-        align-self: center;
-    }
-  
-   #text-container {
+#sidebar.active {
+  margin-right: -280px;
+}
+
+.bg-color-sidebar-list {
+  background-color: black;
+  color: #a5a5a5;
+
+  h6 {
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 0.7em;
+  }
+
+  &:hover {
+    background-color: black;
+    color: #dbdbdb;
+  }
+
+  &:focus {
+    background-color: black;
+  }
+}
+
+#player {
+  background-color: #181818;
+  border-top: .5px solid #343434;
+  position: absolute;
+  bottom: 0;
+
+  #cover {
+    width: 60px;
+    margin-left: 20px;
+  }
+
+  #volumeControl {
+    width: 80px;
+    height: 4px;
+    background: #e9ecef;
+    -webkit-appearance: none;
+  }
+
+  #volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  #volumeControl::-moz-range-thumb {
+    -webkit-appearance: none;
+  }
+
+  #volumeControl::-ms-thumb {
+    -webkit-appearance: none;
+  }
+
+  #test {
+    background-color: #181818;
+    border: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* CARD PRINCIPALE - Album */
+/* ---------------------------------------------------------------------------------------------- */
+
+#playing-container-under-album {
+  background: transparent;
+  font-size: 0.7em;
+  white-space: nowrap;
+
+  #album-image {
+    box-shadow: 2px 2px 30px rgb(27, 27, 27);
+    align-self: center;
+  }
+
+  #text-container {
     display: flex;
     flex-direction: column;
     justify-content: end;
-   }
-    
-    h1 {
-        font-size: 80px;
-        font-weight: bolder;
-        white-space:pre-wrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: bolder;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  h6 {
+    font-size: 1.2em;
+  }
+
+  span {
+    font-weight: 200;
+    opacity: .5;
+  }
+
+  strong {
+    color: #a5a5a5;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+}
+
+/* LISTA CANZONI - Album */
+/* ---------------------------------------------------------------------------------------------- */
+
+.bg-main {
+  background-color:  #101010;
+}
+
+.bg-album {
+  background-repeat: no-repeat;
+  
+}
+
+@keyframes scrollAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+#body-container-album {
+  background-color: #1010102a;
+
+  #svg-container:hover {
+    border-radius: 50%;
+    scale: 1.1;
+    box-shadow: 0px 0px 20px#2eb454;
+    cursor: pointer;
+  }
+
+  .icons-up {
+    font-size: 25px;
+    color: #a5a5a5;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  #header-playlist-album {
+
+    h6,
+    i {
+      font-size: 0.8em;
+      color: #5e5e5e;
+    }
+  }
+
+  #album-song {
+
+    &:hover {
+      background-color: #a5a5a538;
     }
 
     h6 {
-        font-size: 1.2em;
-    }
-  
-    span {
-        font-weight: 200;
-        opacity: .5;
-    }
-  
-    strong {
-        color: #a5a5a5;
-        &:hover {
-            color: white;
-        }
-    }
-  
-  }
-
-  /* LISTA CANZONI - Album */
-  /* ---------------------------------------------------------------------------------------------- */
-
-  .song-color{
-    background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
-    background-attachment: fixed;
-  }
-
-  #body-container-album {
-    background-color: #1010102a;
-
-    #svg-container:hover {
-        border-radius: 50%;
-        scale: 1.1;
-        box-shadow: 0px 0px 20px#2eb454;
-        cursor: pointer;
-    }
-
-    .icons-up {
-        font-size: 25px;
-        color: #a5a5a5;
-
-        &:hover {
-            color: white;
-            cursor: pointer;
-        }
-    }
-
-    #header-playlist-album {
-      h6, i {
-        font-size: 0.8em;
-        color: #5e5e5e;
-      }
-    }
-
-    #album-song {
+      font-size: 0.9em;
+      color: #5e5e5e;
 
       &:hover {
-        background-color: #a5a5a538;
+        text-decoration: underline;
       }
-
-      h6 {
-        font-size: 0.9em;
-        color: #5e5e5e;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      p {
-        font-size: 0.8em;
-        color: #5e5e5e;
-        font-weight: bold;
-      }
-
-      #artist-link {
-        &:hover {
-          text-decoration: underline;
-          color: white;
-        }
     }
+
+    p {
+      font-size: 0.8em;
+      color: #5e5e5e;
+      font-weight: bold;
     }
-    
+
+    #artist-link {
+      &:hover {
+        text-decoration: underline;
+        color: white;
+      }
+    }
   }
-  
-  
+
+}

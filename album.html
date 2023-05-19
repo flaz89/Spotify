@@ -22,7 +22,7 @@
 
     <!---------------------------------------------------------------------------------------- MAIN -->
     <main>
-        <div id="main" class="row m-0 song-color">
+        <div id="main" class="row m-0 bg-main">
             <!---------------------------------------------------------------------------------------- NAVBAR -->
             <div id="navbar" class="col-3 p-0">
                 <nav class="col pb-0 test1 h-100">
@@ -150,7 +150,7 @@
                 </nav>
             </div>
             <!---------------------------------------------------------------------------------------- MAIN-BODY -->
-            <div id="main-body-album" class="col p-0 position-relative">
+            <div id="main-body-album" class="col p-0 position-relative bg-album">
                 <div id="upper-bar" class="py-3 px-4 d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center">
                         <a href="./home.html"><img src="./assets/svg/circle_arrow_left.svg" width="30px" alt=""
@@ -297,7 +297,7 @@
         <div id="rigaPlayer" class="row m-0">
             <div id="player" class="col-12 p-0">
                 <div id="musicPlayer" class=" d-flex justify-content-between align-items-center pb-3">
-                    <div class="d-flex"> <!--all cover-->
+                    <div id="cardPlayer" class="d-flex"> <!--all cover-->
                         <div><!--img-->
                             <img id="cover" src="./assets/imgs/main/image-1.jpg" alt="">
                         </div>
@@ -322,7 +322,7 @@
                                     <a href="" class="me-4 toggle_music fs-5"><i class="bi bi-skip-backward-fill"></i></a>
                                 </div>
                                 <div>
-                                    <button id="test" type="button" onclick="play()" class="me-4 fs-2 toggle_music"><i
+                                    <button id="test" type="button" onclick="play2()" class="me-4 fs-2 toggle_music"><i
                                             class="bi bi-play-circle-fill"></i></button>
 
                                     <audio id="audio"

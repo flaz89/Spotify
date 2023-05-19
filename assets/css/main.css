@@ -612,11 +612,22 @@ a {
 
 /* LISTA CANZONI - Album */
 /* ---------------------------------------------------------------------------------------------- */
-.song-color {
-  background: linear-gradient(to bottom, #e5c651 100px, #101010 500px);
-  background-attachment: fixed;
+.bg-main {
+  background-color: #101010;
 }
 
+.bg-album {
+  background-repeat: no-repeat;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
 #body-container-album {
   background-color: rgba(16, 16, 16, 0.1647058824);
 }
@@ -634,7 +645,8 @@ a {
   color: white;
   cursor: pointer;
 }
-#body-container-album #header-playlist-album h6, #body-container-album #header-playlist-album i {
+#body-container-album #header-playlist-album h6,
+#body-container-album #header-playlist-album i {
   font-size: 0.8em;
   color: #5e5e5e;
 }
