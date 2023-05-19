@@ -62,10 +62,8 @@ fetchArtist();
 async function fetchTracks() {
   try {
     let searchArtist = new URLSearchParams(window.location.search);
-    const url =
-      "https://striveschool-api.herokuapp.com/api/deezer/artist/412/top?limit=50";
-    let id = searchArtist.get("limit");
-    const response = await fetch(url + id);
+    let id = searchArtist.get("artistid");
+    const response = await fetch( `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
