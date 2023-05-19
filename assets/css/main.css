@@ -794,6 +794,15 @@ a {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.704) 60px, rgba(0, 0, 0, 0.163));
 }
 
+@media screen and (max-width: 480px) {
+  #main-body {
+    height: 100%;
+  }
+  #album-image {
+    width: 200px;
+    height: 200px;
+  }
+}
 body {
   height: 100vh;
   margin: 0;
