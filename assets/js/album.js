@@ -13,20 +13,54 @@ closeSidebar.addEventListener("click", function () {
   sidebar.classList.toggle("active");
 });
 
+
+
+
+
+const mainContent = document.getElementById("main-body-album");
+const red = Math.floor(Math.random() * 256);
+const green = Math.floor(Math.random() * 256);
+const blue = Math.floor(Math.random() * 256);
+
+
 //funzione per cambiare il colore della "upper-bar" in fase di scrolling -------------------------------------- UPPER-BAR
 
 mainBody.addEventListener("scroll", function () {
   const top = mainBody.scrollTop;
 
   if (top >= 130) {
-    upperBar.classList.add("active");
-    upperBar.classList.remove("inactive");
+    upperBar.style.backgroundColor = `rgb(${red}, ${green}, ${blue}, .6)`;
   } else if (top < 130) {
-    upperBar.classList.remove("active");
-    upperBar.classList.add("inactive");
+    upperBar.style.backgroundColor = `transparent`;
   }
 });
 
+
+
+
+
+
+
+//funzione per far mandare in su il BG in fase di scrolling -------------------------------------- BG_ALBUM_SCROLL
+function changeColor() {
+  mainContent.style.backgroundImage = `linear-gradient(to bottom, rgb(${red}, ${green}, ${blue}) 100px, #101010 500px)`
+}
+changeColor();
+
+
+//funzione per far mandare in su il BG in fase di scrolling -------------------------------------- BG_ALBUM_SCROLL
+
+mainContent.addEventListener("scroll", function() {
+  const position = mainContent.scrollTop;
+  mainContent.style.backgroundPositionY =  - position + "px";
+})
+
+
+
+
+
+
+// -----------------------------------------------------
 async function fetchAlbum() {
     try {
       let searchAlbum = new URLSearchParams(window.location.search);
