@@ -63,7 +63,9 @@ async function fetchTracks() {
   try {
     let searchArtist = new URLSearchParams(window.location.search);
     let id = searchArtist.get("artistid");
-    const response = await fetch( `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`);
+    const response = await fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=50`
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -72,7 +74,11 @@ async function fetchTracks() {
 
     let array = data2.data;
     let popularList = document.getElementById("listaArtist");
-
+    let playSong = document.getElementById("test");
+    playSong.addEventListener("click", () => {
+      let progress = document.getElementById("progress");
+      progress.classList.toggle("barra");
+    });
     for (let i = 0; i < array.length; i++) {
       popularList.innerHTML += ` 
   <li id='btnCard' class="text-white mt-4 ms-2 d-flex">
@@ -94,14 +100,14 @@ async function fetchTracks() {
       </div>
   </div>
 </li>`;
-const playTop = document.getElementById('btnTop')
-playTop.addEventListener('click', (event)=> {
-  event.preventDefault()
-  let audio = document.getElementById("audio");
-          audio.src = `${array[i].preview}`;
-          return audio.paused ? audio.play() : audio.pause();
-})
-const bottone = document.querySelectorAll("#btnCard");
+      const playTop = document.getElementById("btnTop");
+      playTop.addEventListener("click", (event) => {
+        event.preventDefault();
+        let audio = document.getElementById("audio");
+        audio.src = `${array[i].preview}`;
+        return audio.paused ? audio.play() : audio.pause();
+      });
+      const bottone = document.querySelectorAll("#btnCard");
       for (let i = 0; i < bottone.length; i++) {
         bottone[i].addEventListener("click", (event) => {
           event.preventDefault();
@@ -135,8 +141,19 @@ function play() {
   return audio.paused ? audio.play() : audio.pause();
 }
 
-
 function play3(event) {
   event.preventDefault();
   return audio.paused ? audio.play() : audio.pause();
 }
+
+let shuffle = document.getElementById('shuffle')
+shuffle.addEventListener('click', (event) => {
+  event.preventDefault()
+  shuffle.classList.toggle('iconColor')
+})
+
+let repeat = document.getElementById('repeat')
+repeat.addEventListener('click', (event) => {
+  event.preventDefault()
+  repeat.classList.toggle('iconColor')
+})

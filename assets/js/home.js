@@ -65,10 +65,10 @@ async function fetchData() {
         </div>
     </div>`;
     let cardPlayer = document.getElementById("cardPlayer");
-    cardPlayer.innerHTML = `  <div><!--img-->
+    cardPlayer.innerHTML = `  <div>
     <img id="cover" src=${array[randomSong].album["cover"]} alt="">
 </div>
-<div class="ms-2 d-flex align-items-center"> <!--description-->
+<div class="ms-2 d-flex align-items-center"> 
     <div>
         <p class="text-white m-0">${array[randomSong].album["title"]}</p>
         <p class="text-white">${array[randomSong].artist["name"]}</p>
@@ -77,6 +77,16 @@ async function fetchData() {
         <i class="bi bi-heart text-white ps-4"></i>
     </div>
 </div>`;
+
+let playSong = document.getElementById('test');
+playSong.addEventListener('click', () => {
+  let audio = document.getElementById("audio");
+  let progress = document.getElementById('progress')
+  progress.classList.toggle('barra')
+  audio.src = `${array[randomSong].preview}`
+  return audio.paused ? audio.play() : audio.pause();
+})
+
 
     for (let i = 0; i < array.length; i++) {
       console.log(array[i].album.id);
@@ -146,10 +156,6 @@ fetchData();
 
 //funzione per far faunzionare il "player" -------------------------------------- PLAYER
 let audio = document.getElementById("audio");
-function play(src) {
-  audio.src = src;
-  return audio.paused ? audio.play() : audio.pause();
-}
 
 function play2(src) {
   audio.src = src;
@@ -161,3 +167,16 @@ function play3(event, src) {
   audio.src = src;
   return audio.paused ? audio.play() : audio.pause();
 }
+
+// change icon color on click
+let shuffle = document.getElementById('shuffle')
+shuffle.addEventListener('click', (event) => {
+  event.preventDefault()
+  shuffle.classList.toggle('iconColor')
+})
+
+let repeat = document.getElementById('repeat')
+repeat.addEventListener('click', (event) => {
+  event.preventDefault()
+  repeat.classList.toggle('iconColor')
+})

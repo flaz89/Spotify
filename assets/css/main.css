@@ -201,6 +201,12 @@
   background: #e9ecef;
   -webkit-appearance: none;
 }
+#player #volumeControl[type=range] {
+  background-color: #6c757d;
+}
+#player #volumeControl[type=range]::-moz-range-progress {
+  background-color: white;
+}
 #player #volumeControl::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
@@ -209,6 +215,9 @@
 }
 #player #volumeControl::-ms-thumb {
   -webkit-appearance: none;
+}
+#player .iconColor {
+  color: #149643;
 }
 #player #test {
   background-color: #181818;
@@ -230,6 +239,22 @@
 
 .hidden {
   display: none;
+}
+
+.barra {
+  animation: progressBar 120s linear infinite;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+li {
+  cursor: pointer;
 }
 
 /* CARD PRINCIPALE */
@@ -734,6 +759,41 @@ a {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.704) 60px, rgba(0, 0, 0, 0.163));
   }
 }
+.contenitore {
+  width: 220px;
+  height: 140px;
+}
+
+.contenitore:hover {
+  cursor: pointer;
+  scale: 1.2;
+  z-index: 1;
+}
+
+.img_card_s {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px black;
+  margin-left: 80px;
+  transform: rotate(20deg);
+}
+
+.o_flow {
+  overflow: hidden;
+}
+
+#input_find {
+  background-color: rgb(64, 63, 63);
+  width: 90%;
+}
+
+#navbar_xs {
+  cursor: pointer;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.704) 60px, rgba(0, 0, 0, 0.163));
+}
+
 body {
   height: 100vh;
   margin: 0;

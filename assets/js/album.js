@@ -92,6 +92,13 @@ async function fetchAlbum() {
      </div>
  </div>
 </div>`;
+
+let playSong = document.getElementById('test');
+playSong.addEventListener('click', () => {
+  let progress = document.getElementById('progress')
+  progress.classList.toggle('barra')
+})
+
     const trackS = data.tracks.data;
     console.log(trackS);
     let songAlbum = document.getElementById("body-container-under");
@@ -107,7 +114,7 @@ async function fetchAlbum() {
                                     <a id='btnCard' href=""><h6 class="mb-1 text-white">${
                                       trackS[i].title
                                     }</h6></a>
-                                    <a href=""><p id="artist-link" class="m-0">${
+                                    <a href="../../artist.html?artistid=${trackS[i].artist.id}"><p id="artist-link" class="m-0">${
                                       trackS[i].artist["name"]
                                     }</p></a>
                                 </div>
@@ -160,3 +167,14 @@ function play3(event) {
   return audio.paused ? audio.play() : audio.pause();
 }
 
+let shuffle = document.getElementById('shuffle')
+shuffle.addEventListener('click', (event) => {
+  event.preventDefault()
+  shuffle.classList.toggle('iconColor')
+})
+
+let repeat = document.getElementById('repeat')
+repeat.addEventListener('click', (event) => {
+  event.preventDefault()
+  repeat.classList.toggle('iconColor')
+})

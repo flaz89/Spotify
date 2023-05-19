@@ -158,6 +158,16 @@
     -webkit-appearance: none;
   }
 
+  #volumeControl[type="range"] {
+    background-color: #6c757d;
+  
+  }
+
+  #volumeControl[type="range"]::-moz-range-progress {
+    background-color: white; 
+    
+  }
+
   #volumeControl::-webkit-slider-thumb {
     -webkit-appearance: none;
   }
@@ -168,6 +178,10 @@
 
   #volumeControl::-ms-thumb {
     -webkit-appearance: none;
+  }
+
+  .iconColor {
+    color:#149643;
   }
 
   #test {
@@ -196,6 +210,25 @@
 .hidden {
   display: none;
 }
+
+.barra {
+  animation: progressBar 120s linear infinite;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+li {
+  cursor: pointer;
+}
+
 
 /* CARD PRINCIPALE */
 /* ---------------------------------------------------------------------------------------------- */
