@@ -42,10 +42,10 @@ async function fetchData() {
 
     //---------------------------------------------------------- RANDOM SONG HEADER
     const randomSong = Math.floor(Math.random() * 25) + 1;
-    
 
-    document.getElementById("playing-container").innerHTML +=
-      `<div id="playing-container-under" class=" px-3 w-100 d-flex">
+    document.getElementById(
+      "playing-container"
+    ).innerHTML += `<div id="playing-container-under" class=" px-3 w-100 d-flex">
         <img id="imageColor" src="${array[randomSong].album.cover_big}" height="100%" class="py-4" alt="">
         <div id="text-container" class="ps-4 my-2 w-100">
             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -56,34 +56,25 @@ async function fetchData() {
             <h6 class="mb-3 text-white">${array[randomSong].artist.name}</h6>
             <h6 class="text-white">Ascolta il nuovo singolo di ${array[randomSong].artist.name}!</h6>
             <div class="d-flex align-items-center gap-3 mt-1">
-                <button type="button" onclick="play2(${array[randomSong].preview})" id="btnPlay">Play</button>
+                <button type="button" onclick="play2('${array[randomSong].preview}')" id="btnPlay">Play</button>
                 <button id="btnSave">Save</button>
                 <a href="javascript:void(0)"><strong class="p-1 ms-2 fs-4">•••</strong></a>
             </div>
         </div>
-    </div>`
-
-    //funzione per cambiare il colore della "upper-bar" in fase di scrolling -------------------------------------- UPPER-BAR
-    
-    
-    mainBody.addEventListener("scroll", function () {
-      const top = mainBody.scrollTop;
-      
-
-      if (top >= 130) {
-        upperBar.classList.add("active");
-        upperBar.classList.remove("inactive");
-      } else if (top < 130) {
-        upperBar.classList.remove("active");
-        upperBar.classList.add("inactive");
-      }
-    });
-
-
-
-
-
-
+    </div>`;
+    let cardPlayer = document.getElementById("cardPlayer");
+    cardPlayer.innerHTML = `  <div><!--img-->
+    <img id="cover" src=${array[randomSong].album["cover"]} alt="">
+</div>
+<div class="ms-2 d-flex align-items-center"> <!--description-->
+    <div>
+        <p class="text-white m-0">${array[randomSong].album["title"]}</p>
+        <p class="text-white">${array[randomSong].artist["name"]}</p>
+    </div>
+    <div>
+        <i class="bi bi-heart text-white ps-4"></i>
+    </div>
+</div>`;
 
     for (let i = 0; i < array.length; i++) {
       console.log(array[i].album.id);
@@ -105,6 +96,7 @@ async function fetchData() {
 </a>
 </div>`;
     }
+
     for (let i = 0; i < 6; i++) {
       const riga2 = document.getElementById("buonasera");
       riga2.innerHTML += `<div class="col-6 col-md-4">
@@ -139,11 +131,13 @@ fetchData();
 
 //funzione per far faunzionare il "player" -------------------------------------- PLAYER
 let audio = document.getElementById("audio");
-function play() {
+function play(src) {
+  audio.src = src;
   return audio.paused ? audio.play() : audio.pause();
 }
 
-function play2() {
+function play2(src) {
+  audio.src = src;
   return audio.paused ? audio.play() : audio.pause();
 }
 
@@ -152,28 +146,3 @@ function play3(event, src) {
   audio.src = src;
   return audio.paused ? audio.play() : audio.pause();
 }
-
-/*async function playMusic (event) {
- const valore = await fetchData();
- console.log(valore);
- event.preventDefault();
- if (valore[i].album.id == valore[i].album.id) {
-   let rigaPlayer = document.getElementById("rigaPlayer");
-   rigaPlayer.innerHTML = ` <div id="player" class="col-12 p-0">
-<div id="musicPlayer" class=" d-flex justify-content-between align-items-center pb-2">
-<div class="d-flex"> <!--all cover-->
- <div><!--img-->
-     <img id="cover" src=${valore[i].album["cover"]} alt="">
- </div>
- <div class="ms-2 d-flex align-items-center"> <!--description-->
-     <div>
-         <p class="text-white m-0">${valore[i].album["title"]}</p>
-         <p class="text-white">${valore[i].artist["name"]}</p>
-     </div>
-     <div>
-         <i class="bi bi-heart text-white ps-4"></i>
-     </div>
- </div>
-</div>`;
- }
-};*/

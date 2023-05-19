@@ -75,7 +75,7 @@ async function fetchTracks() {
 
     for (let i = 0; i < array.length; i++) {
       popularList.innerHTML += ` 
-  <li class="text-white mt-4 ms-2 d-flex">
+  <li id='btnCard' class="text-white mt-4 ms-2 d-flex">
   <div class="row w-100 d-flex">
     <div class='col d-flex align-items-center'>
           <img src=${array[i].album.cover} alt=""
@@ -94,9 +94,49 @@ async function fetchTracks() {
       </div>
   </div>
 </li>`;
+const playTop = document.getElementById('btnTop')
+playTop.addEventListener('click', (event)=> {
+  event.preventDefault()
+  let audio = document.getElementById("audio");
+          audio.src = `${array[i].preview}`;
+          return audio.paused ? audio.play() : audio.pause();
+})
+const bottone = document.querySelectorAll("#btnCard");
+      for (let i = 0; i < bottone.length; i++) {
+        bottone[i].addEventListener("click", (event) => {
+          event.preventDefault();
+          let cardPlayer = document.getElementById("cardPlayer");
+          cardPlayer.innerHTML = `  <div><!--img-->
+      <img id="cover" src=${array[i].album["cover"]} alt="">
+    </div>
+    <div class="ms-2 d-flex align-items-center"> <!--description-->
+      <div>
+          <p class="text-white m-0">${array[i].title}</p>
+          <p class="text-white">${array[i].artist["name"]}</p>
+      </div>
+      <div>
+          <i class="bi bi-heart text-white ps-4"></i>
+      </div>
+    </div>`;
+          let audio = document.getElementById("audio");
+          audio.src = `${array[i].preview}`;
+        });
+      }
     }
   } catch (error) {
     console.log("Fetch Error:", error);
   }
 }
 fetchTracks();
+
+let audio = document.getElementById("audio");
+
+function play() {
+  return audio.paused ? audio.play() : audio.pause();
+}
+
+
+function play3(event) {
+  event.preventDefault();
+  return audio.paused ? audio.play() : audio.pause();
+}
