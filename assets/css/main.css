@@ -683,6 +683,56 @@ a {
   font-weight: 600;
 }
 
+@media screen and (max-width: 480px) {
+  #navbar {
+    display: none;
+  }
+  #sidebar {
+    display: none;
+  }
+  #card_xl {
+    width: 90%;
+    display: flex;
+    background-color: #252525;
+  }
+  .btn_play {
+    display: none;
+  }
+  #card_xl img {
+    width: 200px;
+  }
+  .text_cardXl {
+    width: 50%;
+    margin-left: 10px;
+  }
+  .options {
+    display: flex;
+    justify-content: space-between;
+  }
+  #flex_ {
+    display: flex;
+    justify-content: space-between;
+  }
+  .spotify-playlists2 {
+    background-color: transparent;
+  }
+  #buonasera {
+    width: 90%;
+  }
+  .elimina {
+    display: none;
+  }
+  #main-body {
+    height: 100%;
+  }
+  #player {
+    display: none;
+  }
+  #navbar_xs {
+    cursor: pointer;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.704) 60px, rgba(0, 0, 0, 0.163));
+  }
+}
 body {
   height: 100vh;
   margin: 0;

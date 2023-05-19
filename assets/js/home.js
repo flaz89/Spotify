@@ -88,18 +88,29 @@ async function fetchData() {
     for (let i = 0; i < array.length; i++) {
       console.log(array[i].album.id);
 
-      riga.innerHTML += ` <div class="col-2"> 
+      riga.innerHTML += ` <div class="col-12 col-md-2"> 
     <a href="../../album.html?albumid=${array[i].album.id}">
     <div class="spotify-playlists">
         <div class="list">
-            <div class="item">
+            <div id="card_xl" class="item">
                 <img src=${array[i].album["cover"]} alt="Album Image">
+                <div id="flex_" class="d-md-none">
+                <div>
+                <i class="bi bi-heart-fill text-success"></i>
+                <i class="bi bi-three-dots-vertical text-light"></i>
+                </div>
+                <i class="bi bi-play-circle text-light destra"></i>
+                </div>
                 <div class="play">
                    <a onclick="play3(event, '${array[i].preview}')" id='player5' href=""><img src="./assets/svg/player_card.svg" class="btn_play " alt=""></a>
                 </div>
+                <div class="text_cardXl">
+                
                 <h4>${array[i].album["title"]}</h4>
-                <a href="../../artist.html?artistid=${array[i].artist.id}"> <p>${array[i].artist["name"]}</p> </a>
-            </div>
+                <a href="../../artist.html?artistid=${array[i].artist.id}"> <p>${array[i].artist["name"]}</p> 
+                </a>            
+                </div>           
+                </div>
         </div>
     </div>
 </a>
@@ -111,6 +122,7 @@ async function fetchData() {
     <a href="../../album.html?albumid=${array[i].album.id}">
     <div class="card mb-3 mt-4 spotify-playlists2">
     <div class="row g-0">
+    <div class="d-flex">
         <div class="col-md-4 ">
             <div class="d-flex w-50">
                 <img src=${array[i].album["cover"]} class="img-fluid" alt="...">
@@ -125,6 +137,7 @@ async function fetchData() {
             <div class="card-body ">
                 <h2 class="card-title text_title">${array[i].album["title"]}</h2>
             </div>
+        </div>
         </div>
     </div>
 </div>
