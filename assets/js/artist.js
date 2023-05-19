@@ -90,10 +90,10 @@ async function fetchTracks() {
           </div>
       </div>
       <div class='col  d-flex align-items-center'>
-      <p class="opacity-75">${array[i].rank}</p>
+      <p class="opacity-75 mx-5">${array[i].rank}</p>
       </div>
       <div class='col  d-flex align-items-center justify-content-between'>
-      <p class="opacity-75 pe-4">${Math.trunc(array[i].duration / 60)}:${(
+      <p class="opacity-75 pe-4 ms-5">${Math.trunc(array[i].duration / 60)}:${(
         (array[i].duration / 60) *
         10
       ).toFixed(0)}</p>
